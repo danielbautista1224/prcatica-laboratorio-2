@@ -7,15 +7,8 @@ package proyectolaboratorio2;
 
 /**
  *
- * @author LABSIS
+ * @author ASUS
  */
-public class Proyectolaboratorio2 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class ordenamiento {
     
 }

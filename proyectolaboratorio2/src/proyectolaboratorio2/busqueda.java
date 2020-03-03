@@ -10,5 +10,14 @@ package proyectolaboratorio2;
  * @author ASUS
  */
 public class busqueda {
+    //busqueda en un listado desorganizado
+    public int busquedaSecuencial(int[] array,int elemento){
+        for(int i=0; i < array.length;i++){
+            if(array[i]==elemento){
+                return array[i];
+            }
+        }
+        return 0;
+    }
     
 }

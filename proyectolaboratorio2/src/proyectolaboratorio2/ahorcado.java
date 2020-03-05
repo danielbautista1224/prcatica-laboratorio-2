@@ -135,10 +135,6 @@ int vidas=9;
         // TODO add your handling code here:
         String palabrausada=jPasswordField1.getText();
         int numeroletras=palabrausada.length();
-        System.out.println("Numero de letras: "+numeroletras);
-        for(int indice=0;indice<numeroletras;indice++){
-            System.out.println("character: "+palabrausada.charAt(indice));
-        }
         int cols=numeroletras;
         int rows=1;
         jTable1.setModel(new DefaultTableModel(rows,cols));
@@ -167,7 +163,7 @@ int vidas=9;
         if(vidas>0)
         {
             logrado=false;
-        System.out.println("Vidas restantes"+vidas);
+        System.out.println("Vidas restantes ="+vidas);
         for(int columna=0;columna<cols;columna++)
         {
             if(palabrausada.charAt(columna)==letradeadivinacion.charAt(0)){
@@ -179,12 +175,12 @@ int vidas=9;
         }
         if(logrado==true)
         {
-          System.out.println("vidas= "+vidas);
+          
         }
         else
         {
             vidas--; 
-             System.out.println("vidas= "+vidas);
+            
         }
     }
     }//GEN-LAST:event_jButton2ActionPerformed

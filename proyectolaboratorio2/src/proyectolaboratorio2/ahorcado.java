@@ -12,12 +12,14 @@ import javax.swing.table.DefaultTableModel;
  * @author ASUS
  */
 public class ahorcado extends javax.swing.JFrame {
-
+int vidas=9;
     /**
      * Creates new form ahorcado
      */
     public ahorcado() {
         initComponents();
+        
+        
     }
 
     /**
@@ -160,7 +162,7 @@ public class ahorcado extends javax.swing.JFrame {
          String palabrausada=jPasswordField1.getText();
         int numeroletras=palabrausada.length();
         int cols=numeroletras;
-        int vidas=9;
+        
         Boolean logrado;
         if(vidas>0)
         {
@@ -177,11 +179,12 @@ public class ahorcado extends javax.swing.JFrame {
         }
         if(logrado==true)
         {
-          
+          System.out.println("vidas= "+vidas);
         }
         else
         {
             vidas--; 
+             System.out.println("vidas= "+vidas);
         }
     }
     }//GEN-LAST:event_jButton2ActionPerformed

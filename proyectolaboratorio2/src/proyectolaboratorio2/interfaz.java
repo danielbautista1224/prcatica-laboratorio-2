@@ -90,10 +90,20 @@ public class interfaz extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Aordenanumeros.setText("Ordena Numeros");
+        Aordenanumeros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AordenanumerosActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("jLabel4");
 
         jButton2.setText("Ahorcado");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         Ordenar.setText("jLabel2");
 
@@ -151,6 +161,20 @@ public class interfaz extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void AordenanumerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AordenanumerosActionPerformed
+        // TODO add your handling code here:
+        
+        ordenamient0 ord = new ordenamient0();
+        ord.setVisible(true);
+        
+    }//GEN-LAST:event_AordenanumerosActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    ahorcado aho = new ahorcado ();
+    aho.setVisible(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

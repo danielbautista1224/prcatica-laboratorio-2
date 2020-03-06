@@ -17,10 +17,8 @@ public class ahorcado extends javax.swing.JFrame {
      * Creates new form ahorcado
      */
     public ahorcado() {
-        initComponents() 
-
-
-}
+        initComponents();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -180,7 +178,10 @@ public class ahorcado extends javax.swing.JFrame {
         else
         {
             vidas--; 
-             System.out.println("vidas= "+vidas);
+<<<<<<< HEAD
+            
+=======
+>>>>>>> parent of 0d96d62... sistema de vidas funcional , se limpia un poco
         }
     }
     }//GEN-LAST:event_jButton2ActionPerformed

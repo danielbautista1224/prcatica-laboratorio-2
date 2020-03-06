@@ -17,10 +17,8 @@ public class ahorcado extends javax.swing.JFrame {
      * Creates new form ahorcado
      */
     public ahorcado() {
-        initComponents() 
-
-
-}
+        initComponents();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -135,6 +133,10 @@ public class ahorcado extends javax.swing.JFrame {
         // TODO add your handling code here:
         String palabrausada=jPasswordField1.getText();
         int numeroletras=palabrausada.length();
+        System.out.println("Numero de letras: "+numeroletras);
+        for(int indice=0;indice<numeroletras;indice++){
+            System.out.println("character: "+palabrausada.charAt(indice));
+        }
         int cols=numeroletras;
         int rows=1;
         jTable1.setModel(new DefaultTableModel(rows,cols));
@@ -163,7 +165,7 @@ public class ahorcado extends javax.swing.JFrame {
         if(vidas>0)
         {
             logrado=false;
-        System.out.println("Vidas restantes ="+vidas);
+        System.out.println("Vidas restantes"+vidas);
         for(int columna=0;columna<cols;columna++)
         {
             if(palabrausada.charAt(columna)==letradeadivinacion.charAt(0)){
@@ -180,7 +182,6 @@ public class ahorcado extends javax.swing.JFrame {
         else
         {
             vidas--; 
-             System.out.println("vidas= "+vidas);
         }
     }
     }//GEN-LAST:event_jButton2ActionPerformed

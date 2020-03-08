@@ -49,8 +49,8 @@ public class Resistencia extends javax.swing.JFrame {
         franja3.addItem("Violeta");
         franja3.addItem("Gris");
         franja3.addItem("Blanco");
-        franja3.addItem("oro");
-        franja3.addItem("plata");
+        franja3.addItem("Oro");
+        franja3.addItem("Plata");
         franja4.addItem("Marron");
         franja4.addItem("Rojo");
         franja4.addItem("Naranja");
@@ -59,9 +59,9 @@ public class Resistencia extends javax.swing.JFrame {
         franja4.addItem("Azul");
         franja4.addItem("Violeta");
         franja4.addItem("Gris");
-        franja4.addItem("oro");
-        franja4.addItem("plata");
-        franja4.addItem("ninguno");        
+        franja4.addItem("Oro");
+        franja4.addItem("Plata");
+        franja4.addItem("Ninguno");        
     }
 
     /**
@@ -96,6 +96,11 @@ public class Resistencia extends javax.swing.JFrame {
         franja4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         calculalo.setText("Calculalo ");
+        calculalo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculaloActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,6 +147,205 @@ public class Resistencia extends javax.swing.JFrame {
     private void franja1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_franja1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_franja1ActionPerformed
+
+    private void calculaloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculaloActionPerformed
+        // TODO add your handling code here:
+        franja1.getSelectedItem();
+        franja2.getSelectedItem();
+        franja3.getSelectedItem();
+        franja4.getSelectedItem();
+        Double valor1=0.0;
+        Double valor2=0.0;
+        Double valor3=0.0;
+        Double valor4=0.0;
+        Double valortotal=0.0;
+        String magnitud="";
+        if (franja1.getSelectedItem()=="Marron")
+        {
+            valor1=10.0;
+        }
+        if (franja1.getSelectedItem()=="Rojo")
+        {
+            valor1=20.0;
+        }
+        if (franja1.getSelectedItem()=="Naranja")
+        {
+            valor1=30.0;
+        }
+        if (franja1.getSelectedItem()=="Amarillo")
+        {
+            valor1=40.0;
+        }
+        if (franja1.getSelectedItem()=="Verde")
+        {
+            valor1=50.0;
+        }
+        if (franja1.getSelectedItem()=="Azul")
+        {
+            valor1=60.0;
+        }
+        if (franja1.getSelectedItem()=="Violeta")
+        {
+            valor1=70.0;
+        }
+        if (franja1.getSelectedItem()=="Gris")
+        {
+            valor1=80.0;
+        }
+        if (franja1.getSelectedItem()=="Blanco")
+        {
+            valor1=90.0;
+        }
+        if (franja2.getSelectedItem()=="Negro")
+        {
+            valor2=0.0;
+        }
+        if (franja2.getSelectedItem()=="Marron")
+        {
+            valor2=1.0;
+        }
+        if (franja2.getSelectedItem()=="Rojo")
+        {
+            valor2=2.0;
+        }
+        if (franja2.getSelectedItem()=="Naranja")
+        {
+            valor2=3.0;
+        }
+        if (franja2.getSelectedItem()=="Amarillo")
+        {
+            valor2=4.0;
+        }
+        if (franja2.getSelectedItem()=="Verde")
+        {
+            valor2=5.0;
+        }
+        if (franja2.getSelectedItem()=="Azul")
+        {
+            valor2=6.0;
+        }
+        if (franja2.getSelectedItem()=="Violeta")
+        {
+            valor2=7.0;
+        }
+        if (franja2.getSelectedItem()=="Gris")
+        {
+           valor2=8.0;
+        }
+        if (franja2.getSelectedItem()=="Blanco")
+        {
+            valor2=9.0;
+        }
+        if (franja3.getSelectedItem()=="Negro")
+        {
+           valor3=1.0;
+        }
+        if (franja3.getSelectedItem()=="Marron")
+        {
+            valor3=10.0;
+        }
+        if (franja3.getSelectedItem()=="Rojo")
+        {
+            valor3=100.0;
+        }
+        if (franja3.getSelectedItem()=="Naranja")
+        {
+           valor3=1.0;
+            magnitud="k";
+        }
+        if (franja3.getSelectedItem()=="Amarillo")
+        {
+            valor3=10.0;
+            magnitud="k";
+        }
+        if (franja3.getSelectedItem()=="Verde")
+        {
+            valor3=100.0;
+            magnitud="k";
+        }
+        if (franja3.getSelectedItem()=="Azul")
+        {
+            valor3=1.0;
+            magnitud="M";
+        }
+        if (franja3.getSelectedItem()=="Violeta")
+        {
+            valor3=10.0;
+            magnitud="M";
+        }
+        if (franja3.getSelectedItem()=="Gris")
+        {
+            valor3=100.0;
+            magnitud="M";
+        }
+        if (franja3.getSelectedItem()=="Blanco")
+        {
+           valor3=1.0;
+            magnitud="G";
+        }
+        if (franja3.getSelectedItem()=="Oro")
+        {
+            valor1=0.1;
+        }
+        if (franja3.getSelectedItem()=="Plata")
+        {
+            valor3=0.01;           
+        }
+        if (franja4.getSelectedItem()=="Marron")
+        {
+            valor4=1.0;
+        }
+        if (franja4.getSelectedItem()=="Rojo")
+        {
+            valor4=2.0;
+        }
+        if (franja4.getSelectedItem()=="Naranja")
+        {
+           valor4=0.05;
+          
+        }
+        if (franja4.getSelectedItem()=="Amarillo")
+        {
+            valor4=0.02;
+            
+        }
+        if (franja4.getSelectedItem()=="Verde")
+        {
+            valor4=0.5;
+            
+        }
+        if (franja4.getSelectedItem()=="Azul")
+        {
+            valor4=0.25;
+           
+        }
+        if (franja4.getSelectedItem()=="Violeta")
+        {
+            valor4=0.1;
+           
+        }
+        if (franja4.getSelectedItem()=="Gris")
+        {
+            valor4=0.01;
+           
+        }
+        
+        if (franja3.getSelectedItem()=="Oro")
+        {
+            valor1=5.0;
+        }
+        if (franja3.getSelectedItem()=="Plata")
+        {
+            valor3=10.0;           
+        }
+        if (franja4.getSelectedItem()=="Ninguno")
+        {
+           valor4=20.0;
+            
+        }
+        valortotal=(valor1+valor2)*valor3;
+        valor_resistencia.setText(valortotal+magnitud+"Ω +-"+valor4+"%");
+    }//GEN-LAST:event_calculaloActionPerformed
 
     /**
      * @param args the command line arguments

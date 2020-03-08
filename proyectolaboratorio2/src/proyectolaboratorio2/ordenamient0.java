@@ -5,12 +5,14 @@
  */
 package proyectolaboratorio2;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author ASUS
  */
 public class ordenamient0 extends javax.swing.JFrame {
-
+int rows=3 ;
     /**
      * Creates new form ordenamient0
      */
@@ -27,18 +29,18 @@ public class ordenamient0 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        ordenar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        Aplicar = new javax.swing.JButton();
+        numero_de_columnas = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Ordenar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ordenar.setText("Ordenar");
+        ordenar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ordenarActionPerformed(evt);
             }
         });
 
@@ -55,9 +57,14 @@ public class ordenamient0 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton2.setText("aplicar");
+        Aplicar.setText("aplicar");
+        Aplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AplicarActionPerformed(evt);
+            }
+        });
 
-        jTextField1.setText("                       ");
+        numero_de_columnas.setText("                       ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,12 +77,12 @@ public class ordenamient0 extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(numero_de_columnas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2))
+                        .addComponent(Aplicar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(250, 250, 250)
-                        .addComponent(jButton1)))
+                        .addComponent(ordenar)))
                 .addContainerGap(126, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -83,22 +90,47 @@ public class ordenamient0 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(45, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Aplicar)
+                    .addComponent(numero_de_columnas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(ordenar)
                 .addGap(82, 82, 82))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ordenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ordenarActionPerformed
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+        String columnas=numero_de_columnas.getText()  ;
+        int cols= Integer.parseInt(columnas);
+        for(int columna=0;columna<cols;columna++)
+        {
+           
+            String numeroevaluado=jTable1.toString();
+            int contadorComparacion=columna;
+            int numeroEvaluado=numeroevaluado.charAt(columna);
+            int[]arregloEntrada = new int [cols];
+            while(arregloEntrada[contadorComparacion-1]>numeroEvaluado && contadorComparacion>0){
+                arregloEntrada[contadorComparacion]=arregloEntrada[contadorComparacion-1];
+                contadorComparacion--;
+                if(contadorComparacion==0){
+                    break;
+                }
+            }
+            arregloEntrada[contadorComparacion]=numeroEvaluado;
+            jTable1.setValueAt(arregloEntrada[contadorComparacion], rows, columna);
+        }
+    }//GEN-LAST:event_ordenarActionPerformed
+
+    private void AplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AplicarActionPerformed
+// TODO add your handling code here:
+    String columnas=numero_de_columnas.getText()  ;
+    int cols= Integer.parseInt(columnas);
+    jTable1.setModel(new DefaultTableModel(rows,cols));
+    }//GEN-LAST:event_AplicarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,10 +168,10 @@ public class ordenamient0 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Aplicar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField numero_de_columnas;
+    private javax.swing.JButton ordenar;
     // End of variables declaration//GEN-END:variables
 }

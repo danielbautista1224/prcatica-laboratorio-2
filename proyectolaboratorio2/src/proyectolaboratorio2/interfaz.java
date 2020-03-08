@@ -5,6 +5,8 @@
  */
 package proyectolaboratorio2;
 
+import javax.swing.WindowConstants;
+
 /**
  *
  * @author ASUS
@@ -164,13 +166,14 @@ public class interfaz extends javax.swing.JFrame {
 
     private void AordenanumerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AordenanumerosActionPerformed
         // TODO add your handling code here:
-        
+       
         ordenamient0 ord = new ordenamient0();
         ord.setVisible(true);
         
     }//GEN-LAST:event_AordenanumerosActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
     ahorcado aho = new ahorcado ();
     aho.setVisible(true);
 // TODO add your handling code here:

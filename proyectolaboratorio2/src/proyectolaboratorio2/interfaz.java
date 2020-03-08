@@ -113,6 +113,11 @@ public class interfaz extends javax.swing.JFrame {
         jLabel1.setText("Menu principal");
 
         jButton3.setText("Calculo de resistencias");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("jLabel3");
 
@@ -178,6 +183,11 @@ public class interfaz extends javax.swing.JFrame {
     aho.setVisible(true);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+      Resistencia res = new Resistencia ();
+    res.setVisible(true);  // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

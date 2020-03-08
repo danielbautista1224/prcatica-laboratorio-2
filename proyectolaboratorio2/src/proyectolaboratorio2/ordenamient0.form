@@ -31,8 +31,8 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="numero_de_columnas" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="numero_de_columnas" min="-2" pref="78" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="Aplicar" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -100,9 +100,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="numero_de_columnas">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="                       "/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

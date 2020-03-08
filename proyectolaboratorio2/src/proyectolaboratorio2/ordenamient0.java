@@ -64,8 +64,6 @@ int rows=3 ;
             }
         });
 
-        numero_de_columnas.setText("                       ");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,8 +75,8 @@ int rows=3 ;
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(numero_de_columnas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(numero_de_columnas, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Aplicar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(250, 250, 250)
@@ -108,27 +106,15 @@ int rows=3 ;
         int cols= Integer.parseInt(columnas);
         for(int columna=0;columna<cols;columna++)
         {
-           
-            String numeroevaluado=jTable1.toString();
-            int contadorComparacion=columna;
-            int numeroEvaluado=numeroevaluado.charAt(columna);
-            int[]arregloEntrada = new int [cols];
-            while(arregloEntrada[contadorComparacion-1]>numeroEvaluado && contadorComparacion>0){
-                arregloEntrada[contadorComparacion]=arregloEntrada[contadorComparacion-1];
-                contadorComparacion--;
-                if(contadorComparacion==0){
-                    break;
-                }
-            }
-            arregloEntrada[contadorComparacion]=numeroEvaluado;
-            jTable1.setValueAt(arregloEntrada[contadorComparacion], rows, columna);
+            jTable1.getComponentAt(rows,cols);
         }
     }//GEN-LAST:event_ordenarActionPerformed
 
     private void AplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AplicarActionPerformed
 // TODO add your handling code here:
-    String columnas=numero_de_columnas.getText()  ;
-    int cols= Integer.parseInt(columnas);
+    String columnas=numero_de_columnas.getText();
+    int cols=Integer.parseInt(columnas);
+    
     jTable1.setModel(new DefaultTableModel(rows,cols));
     }//GEN-LAST:event_AplicarActionPerformed
 

@@ -163,6 +163,9 @@ public class ahorcado extends javax.swing.JFrame {
         {
             jTable1.setValueAt("-",0,columna);
         }
+        vidas =9;
+        String vida=vidas+"";
+         jTextField2.setText(vida);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
